@@ -1,12 +1,19 @@
 .container {
     display: flex;
-    /* flex: auto; */
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-content: flex-start;
+    height: 100vh; /* Make the container full viewport height */
 }
 
-
 div.container > div {
-    border:1px solid red;
-    width: calc(100% / 16);
+    border: 1px solid black;
+    flex-grow: 1;
+    width: calc(6.25% - 2px); /* Adjust the width to create 16 columns with no spacing */
+    height: calc(6.25% - 2px); /* Adjust the height to create 16 rows with no spacing */
+    aspect-ratio: 1/1; /* Maintain a 1:1 aspect ratio for each div */
+}
+
+.green {
+    background-color: blue;
 }
