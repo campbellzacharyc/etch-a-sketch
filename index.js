@@ -5,6 +5,8 @@
 
 const container = document.querySelector(".container");
 const boxes = document.getElementsByClassName("child");
+const changeButton = document.querySelector("button");
+let numDivs = 256;
 
 function makeDivs(numDivs) {
     for (i = 0; i < numDivs; i++) {
@@ -14,22 +16,21 @@ function makeDivs(numDivs) {
     }
 };
 
-makeDivs(256);
+makeDivs(numDivs);
 
-// box.addEventListener("mouseover", () => {
-//     box.classList.add("green")
-//     console.log("green");
-// });
+changeButton.addEventListener("click", () => {
+    let numSquares = prompt("How many squares per side? ");
+    if (numSquares <= 100) {
+        let numDivs = numSquares;
+        return numDivs;
+    } else {
+        alert("100 or below please!");
+    }
+});
 
 for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener("mouseover", () => {
         boxes[i].classList.add("green");
         console.log("green");
-    });
-}
-
-
-// box.onmouseover = function makeGreen() {
-//     // box.classList.add("green");
-//     // console.log("green");
-// };
+    })
+};

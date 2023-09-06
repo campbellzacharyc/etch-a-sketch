@@ -1,11 +1,14 @@
 body {
     text-align: center;
-}.container {
+    background-color: black;;
+}
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
     height: 100vh; /* Make the container full viewport height */
+    background-color: black;
 }
 
 div.container > div {
@@ -27,6 +30,9 @@ button {
     transform: translateY(-50%); */
     height: 50px;
     width: 200px;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
 }
