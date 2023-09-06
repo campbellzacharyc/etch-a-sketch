@@ -14,7 +14,8 @@ function numDivs(num) {
 
 function makeDivs(numDivs) {
     container.innerHTML = ''; // Clear the existing squares
-    const percentage = 100 / numSquares; // Calculate the percentage based on the number of squares
+    console.log(numDivs);
+    const percentage = 100 / (numDivs ** (1/2)); // Calculate the percentage based on the number of squares
     for (i = 0; i < numDivs; i++) {
         let cells = document.createElement('div');
         container.appendChild(cells);
@@ -27,7 +28,7 @@ function makeDivs(numDivs) {
 makeDivs(numDivs(numSquares));
 
 changeButton.addEventListener("click", () => {
-    let numUserSquares = prompt("How many squares per side? ");
+    let numUserSquares = +prompt("How many squares per side? ");
     if (numUserSquares <= 100 && !isNaN(numUserSquares)) {
         let numSquares = numUserSquares;
         makeDivs(numDivs(numSquares));
