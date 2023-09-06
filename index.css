@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    /* flex: auto; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+div.container > div {
+    border:1px solid red;
+    width: calc(100% / 16);
+}
