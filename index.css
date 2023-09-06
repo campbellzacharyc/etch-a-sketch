@@ -2,21 +2,23 @@ body {
     text-align: center;
     background-color: black;;
 }
+
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    height: 100vh; /* Make the container full viewport height */
-    background-color: black;
+    height: 600px; /* Make the container full viewport height */
+    width: 600px;
+    margin: auto;
 }
 
 div.container > div {
     border: 1px solid black;
-    flex-grow: 1;
     width: calc(6.25% - 2px); /* Adjust the width to create 16 columns with no spacing */
     height: calc(6.25% - 2px); /* Adjust the height to create 16 rows with no spacing */
     aspect-ratio: 1/1; /* Maintain a 1:1 aspect ratio for each div */
+    flex-grow: 1; /* Allow divs to grow to fill the available space */
 }
 
 .green {
