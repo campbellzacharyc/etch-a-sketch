@@ -34,7 +34,9 @@ changeButton.addEventListener("click", () => {
         makeDivs(numDivs(numSquares));
         for (let i = 0; i < boxes.length; i++) {
             boxes[i].addEventListener("mouseover", () => {
-                boxes[i].classList.add("green");
+                // boxes[i].classList.add("green");
+                boxes[i].style.backgroundColor = randomRgbColor();
+                boxes[i].style.filter = brightness`(- 10%)`;
                 console.log("green");
             })
         };
@@ -45,7 +47,20 @@ changeButton.addEventListener("click", () => {
 
 for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener("mouseover", () => {
-        boxes[i].classList.add("green");
+        // boxes[i].classList.add("green");
+        // document.getElementsByClassName.style.color = randomRgbColor;
+        boxes[i].style.backgroundColor = randomRgbColor();
         console.log("green");
     })
 };
+
+const randomRgbColor = () => {
+    let r = Math.floor(Math.random() * 256); // Random between 0-255
+    let g = Math.floor(Math.random() * 256); // Random between 0-255
+    let b = Math.floor(Math.random() * 256); // Random between 0-255
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+  };
+
+const reduceBrightness = () => {
+    
+}
